@@ -1,0 +1,187 @@
+{
+    "layer": "top",
+    "height": 32,
+    "modules-left":
+    [
+        "hyprland/workspaces",
+        "tray"
+    ],
+    "modules-center":
+    [
+        "clock"
+    ],
+    "modules-right":
+    [
+        "idle_inhibitor",
+        "pulseaudio#outputDevice",
+        "pulseaudio#inputDevice",
+        "backlight",
+        "hyprland/language",
+        "memory",
+        "power-profiles-daemon",
+        "battery"
+    ],
+
+
+    "hyprland/workspaces":
+    {
+        "format": "{id} {icon}",
+        "format-icons":
+        {
+            "active": "",
+            "default": "",
+            "urgent": ""
+        }
+    },
+
+    "tray":
+    {
+        "icon-size": 21,
+        "spacing": 10
+    },
+
+    "idle_inhibitor": {
+        "tooltip-format-activated": "Idle inhibitor active",
+        "tooltip-format-deactivated": "Idle inhibitor not active",
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " ",
+            "deactivated": " ",
+        }
+    },
+
+    "clock":
+    {
+        "format": "{:%A %H:%M:%S %d/%m/%Y}",
+        "interval": 1,
+        "tooltip": false
+    },
+
+    "pulseaudio#outputDevice":
+    {
+        "format": "{icon}  {volume}%",
+        "format-bluetooth": "{icon} 󰂰 {volume}%",
+        "format-muted": "󰖁",
+        "format-icons":
+        {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default":
+            [
+                "", "", "󰕾",  ""
+            ],
+        },
+        "tooltip-format": "{desc}",
+
+        "on-click": "pavucontrol -t 3"
+    },
+
+    "pulseaudio#inputDevice": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "tooltip-format": "{source_desc}",
+
+        "on-click": "pavucontrol -t 4"
+    },
+
+    "network":
+    {
+        "format": "󱦳{bandwidthDownBytes} 󱦲{bandwidthUpBytes}",
+        "format-disconnected": "Disconnected",
+        "format-disabled": "Disabled",
+        "tooltip-format-ethernet": "Interface: {ifname}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "tooltip-format-wifi": "SSID: {essid}\nIP address: {ipaddr}\nGateway address: {gwaddr}\nSubnetmask: {netmask}",
+        "interval": 1
+    },
+
+    "cpu":
+    {
+        "format": " {usage}% ",
+        "interval": 1,
+    },
+
+    "backlight":
+    {
+        "format": "{icon} {percent}%",
+        "states":
+        {
+            "1": 86,
+            "2": 71,
+            "3": 56,
+            "4": 41,
+            "5": 26,
+            "6": 11,
+            "7": 0,
+        },
+        "format-icons":
+            [
+            "",
+        "",
+        "",
+        "󰃞",
+        "󰃝",
+        "󰃟",
+        "󰃠"
+            ],
+            "interval": 1
+    },
+
+    "hyprland/language":
+    {
+        "format-en": "EN",
+        "format-ar": "AR"
+    },
+
+    "memory":
+    {
+        "format": " {percentage}%",
+        "tooltip-format": "Memory: {used}GiB/{total}GiB\nSwap: {swapUsed}GiB/{swapTotal}GiB",
+        "interval": 1
+    },
+
+    "battery":
+    {
+        "states":
+        {
+            "tooMuch": 100,
+            "good": 80,
+            "meh": 50,
+            "warning": 30,
+            "critical": 15
+        },
+
+        "format": "{icon} {capacity}%",
+
+        "format-charging": " {capacity}%",
+        "format-plugged": "󱘖 {capacity}%",
+        "format-full": "{icon} Full",
+        "format-icons":
+        [
+            "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"
+        ],
+
+        "format-time": "{H}h {M}min",
+        "tooltip": true,
+        "tooltip-format": "{timeTo} {power}w",
+
+        "interval": 1
+    },
+
+    "power-profiles-daemon": {
+        "format": "{icon} ",
+        "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+        "tooltip": true,
+        "format-icons":
+        {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        }
+    },
+}
