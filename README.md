@@ -5,7 +5,9 @@ This is a waybar config themed after the vim colorscheme "gruvbox". It aims to b
 
 #Installation:
 Run:
+
 ```git clone https://github.com/Tranomial/Waybar-gruvbox-themed-config.git ~/.config/waybar```
+
 If you get this error message: ```fatal: destination path '/home/user/.config/waybar' already exists and is not an empty directory.```, you might want to move the waybar folder or delete it and then run ```git clone https://github.com/Tranomial/Waybar-gruvbox-themed-config.git ~/.config/waybar```
 
 Next time you start waybar you will have a beutiful gruvbox themed status bar
